@@ -6,10 +6,16 @@
   box-sizing: border-box;
 }
 
+html {
+}
+
 body {
   min-inline-size: 375px;
   max-inline-size: 1440px;
   margin: 0 auto;
+  display: grid;
+  gap: 40px;
+  background-color: #000028;
 }
 
 h1,
@@ -31,6 +37,7 @@ ul {
 picture {
   margin: 0;
   padding: 0;
+  display: none;
 }
 
 button,
@@ -39,4 +46,17 @@ a {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+
+.page-title {
+  font-size: clamp(7.25rem, 6.3125rem + 4vw, 9.8125rem);
+  color: #db00ff;
+  text-shadow: 4px 4px 0px #ff0070;
+  font-weight: 700;
+  line-height: 82.5%;
+}
+
+.container {
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
 }
