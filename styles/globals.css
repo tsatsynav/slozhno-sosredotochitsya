@@ -60,3 +60,8 @@ a {
   padding-inline-start: 10px;
   padding-inline-end: 10px;
 }
+
+.accent-text {
+  color: #000028;
+  background-color: #ff0070;
+}
