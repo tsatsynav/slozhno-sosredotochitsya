@@ -6,62 +6,89 @@
   box-sizing: border-box;
 }
 
-html {
-}
-
-body {
-  min-inline-size: 375px;
-  max-inline-size: 1440px;
-  margin: 0 auto;
-  display: grid;
-  gap: 40px;
-  background-color: #000028;
-}
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p {
-  margin: 0;
-}
-
-ul {
+p,
+ul,
+ol,
+li,
+blockquote {
   margin: 0;
   padding: 0;
+}
+
+ul,
+ol {
   list-style: none;
 }
 
 picture {
   margin: 0;
   padding: 0;
-  display: none;
 }
 
 button,
 a {
-  color: currentColor;
+  color: var(--accent-color);
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 }
 
+html {
+  block-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-inline-size: 375px;
+  max-inline-size: 1440px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 60px;
+  background-color: var(--page-background);
+  color: var(--page-color);
+  font-family: "IBM Plex mono";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* <<<------ BUTTONS ------>>> */
+
+.header__theme-menu-button {
+  inline-size: 70px;
+  block-size: 26px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+}
+
+/* <<<------ TITLES ------>>> */
+
 .page-title {
-  font-size: clamp(7.25rem, 6.3125rem + 4vw, 9.8125rem);
-  color: #db00ff;
-  text-shadow: 4px 4px 0px #ff0070;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-weight: 700;
   line-height: 82.5%;
-}
-
-.container {
-  padding-inline-start: 10px;
-  padding-inline-end: 10px;
-}
-
-.accent-text {
-  color: #000028;
-  background-color: #ff0070;
+  color: var(--page-title);
+  text-shadow: 4px 4px 0px #ff0070;
 }
