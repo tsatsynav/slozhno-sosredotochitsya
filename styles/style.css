@@ -6,6 +6,40 @@
 
 /* <<<------ 1.HEADER ------>>> */
 
+.header {
+  display: grid;
+  position: relative;
+  grid-template-rows: min-content 1fr;
+  gap: 274px;
+  padding-block-start: 20px;
+  padding-block-end: 20px;
+  background-image: url(../images/cover-image-dark.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.header__description {
+  display: flex;
+  flex-direction: column;
+  gap: 114px;
+}
+
+.header__title {
+  position: relative;
+  left: -19px;
+}
+
+.header__text {
+  inline-size: 491px;
+  align-self: end;
+}
+
 /* <<<------ 2.MAIN ------>>> */
 
 /* <<<------ MAIN sections ------>>> */

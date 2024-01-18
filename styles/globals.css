@@ -46,7 +46,7 @@ html {
 
 body {
   min-inline-size: 375px;
-  max-inline-size: 1440px;
+  max-inline-size: 1024px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -91,4 +91,22 @@ body {
   line-height: 82.5%;
   color: var(--page-title);
   text-shadow: 4px 4px 0px #ff0070;
+}
+
+.section-title {
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.article-title {
+  font-weight: 700;
+  color: var(--page-background);
+  background-color: var(--accent-color);
+}
+
+/* <<<------ BLOCKS ------>>> */
+
+.container {
+  padding-inline-start: 20px;
+  padding-inline-end: 20px;
 }
