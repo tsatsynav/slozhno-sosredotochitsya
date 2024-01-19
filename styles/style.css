@@ -94,6 +94,36 @@
 
 /* <<<------ 2.3.upgrade ------>>> */
 
+.upgrade {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.upgrade__description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.upgrade__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
 /* <<<------ 2.4.gallery ------>>> */
+
+.gallery__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  grid-auto-flow: dense;
+}
 
 /* <<<------ 3.FOOTER ------>>> */
