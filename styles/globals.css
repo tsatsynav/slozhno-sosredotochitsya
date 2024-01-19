@@ -29,6 +29,7 @@ ol {
 picture {
   margin: 0;
   padding: 0;
+  display: block;
 }
 
 button,
