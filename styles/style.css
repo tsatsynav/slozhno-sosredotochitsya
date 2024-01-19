@@ -41,12 +41,6 @@
   align-self: end;
 }
 
-@media (min-width: 1200px) and (max-width: 1400px) {
-  .block {
-    /* Стили блока при ширине окна просмотра >= 1200px и <= 1400px */
-  }
-}
-
 @media (min-width: 375px) and (max-width: 768px) {
   .header__text {
     max-inline-size: 364px;
@@ -54,6 +48,9 @@
 }
 
 /* <<<------ 2.MAIN ------>>> */
+
+/* <<<------ MAIN sections ------>>> */
+/* <<<------ 2.1.difficulties ------>>> */
 
 .main {
   display: flex;
@@ -64,7 +61,6 @@
 .difficulties {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   gap: 20px;
 }
 
@@ -82,10 +78,19 @@
   gap: 10px;
 }
 
-/* <<<------ MAIN sections ------>>> */
-/* <<<------ 2.1.difficulties ------>>> */
-
 /* <<<------ 2.2.reasons ------>>> */
+
+.reasons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reasons__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
 
 /* <<<------ 2.3.upgrade ------>>> */
 

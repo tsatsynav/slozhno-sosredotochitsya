@@ -95,6 +95,7 @@ body {
 }
 
 .section-title {
+  max-inline-size: 315px;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 1.2px;
