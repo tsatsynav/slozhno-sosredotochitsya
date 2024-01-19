@@ -9,6 +9,7 @@
 .header {
   display: grid;
   position: relative;
+  min-block-size: 84vh;
   grid-template-rows: min-content 1fr;
   gap: 274px;
   padding-block-start: 20px;
@@ -36,11 +37,50 @@
 }
 
 .header__text {
-  inline-size: 491px;
+  max-inline-size: 491px;
   align-self: end;
 }
 
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .block {
+    /* Стили блока при ширине окна просмотра >= 1200px и <= 1400px */
+  }
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+  .header__text {
+    max-inline-size: 364px;
+  }
+}
+
 /* <<<------ 2.MAIN ------>>> */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.difficulties {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.difficulties__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
 /* <<<------ MAIN sections ------>>> */
 /* <<<------ 2.1.difficulties ------>>> */

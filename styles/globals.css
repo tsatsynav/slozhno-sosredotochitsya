@@ -29,6 +29,7 @@ ol {
 picture {
   margin: 0;
   padding: 0;
+  display: none;
 }
 
 button,
@@ -94,12 +95,16 @@ body {
 }
 
 .section-title {
+  font-size: 16px;
   font-weight: 700;
+  letter-spacing: 1.2px;
   color: var(--accent-color);
 }
 
 .article-title {
+  font-size: 16px;
   font-weight: 700;
+  letter-spacing: 1.2px;
   color: var(--page-background);
   background-color: var(--accent-color);
 }
