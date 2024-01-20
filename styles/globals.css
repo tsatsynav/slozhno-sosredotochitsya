@@ -29,7 +29,13 @@ ol {
 picture {
   margin: 0;
   padding: 0;
+  line-height: 0;
   display: block;
+}
+
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
 }
 
 button,
@@ -46,18 +52,12 @@ html {
 }
 
 body {
-  min-inline-size: 375px;
-  max-inline-size: 1024px;
   display: flex;
   flex-direction: column;
+  min-inline-size: 375px;
+  max-inline-size: 1024px;
   margin: 0 auto;
   gap: 60px;
-  background-color: var(--page-background);
-  color: var(--page-color);
-  font-family: "IBM Plex mono";
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 130%;
 }
 
 .visually-hidden {
@@ -119,4 +119,26 @@ body {
 .container {
   padding-inline-start: 20px;
   padding-inline-end: 20px;
+}
+
+.decorated-zone::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+}
+
+.decorated-zone::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
 }
