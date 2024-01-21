@@ -10,3 +10,357 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 }
+
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+
+.page {
+  font-family: "IBM Plex mono";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 130%;
+  color: var(--page-color);
+  background-color: var(--page-background);
+  background-image: url(../images/cover-image-dark.png);
+  background-size: auto 768px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  .page {
+    background-size: auto 1024px;
+  }
+}
+
+@media (max-width: 576px) {
+  .page {
+    background-size: auto 668px;
+  }
+}
+
+/* <<<------ 1.HEADER ------>>> */
+
+.header {
+  display: grid;
+  position: relative;
+  min-block-size: 768px;
+  grid-template-rows: min-content 1fr;
+  gap: 274px;
+  padding-block-start: 20px;
+  padding-block-end: 20px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    min-block-size: 1024px;
+    grid-template-rows: 1fr 2fr;
+    gap: 174px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    min-block-size: 668px;
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+    padding-block-start: 10px;
+    padding-block-end: 10px;
+  }
+}
+
+.header__top-bar {
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .header__top-bar {
+    min-block-size: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-block-start: 169px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header__top-bar {
+    padding-block-start: 65px;
+  }
+}
+
+.top-bar-rec {
+  position: absolute;
+  top: 1px;
+  right: 28px;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+.top-bar-rec::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: -19px;
+  top: 6px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  background-color: var(--accent-color);
+}
+
+.header__theme-menu-list {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .header__theme-menu-list {
+    flex-direction: column;
+    align-items: end;
+  }
+}
+
+.header__theme-menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: lowercase;
+}
+
+.header__description {
+  display: flex;
+  flex-direction: column;
+  gap: 117px;
+}
+
+@media (max-width: 768px) {
+  .header__description {
+    gap: 164px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header__description {
+    gap: 55px;
+  }
+}
+
+.header__title {
+  position: relative;
+  left: -19px;
+  line-height: 80%;
+}
+
+@media (max-width: 576px) {
+  .header__title {
+    letter-spacing: -3px;
+    line-height: 80%;
+    left: 0;
+  }
+}
+
+.header__text {
+  max-inline-size: 491px;
+  align-self: end;
+}
+
+@media (max-width: 768px) {
+  .header__text {
+    max-inline-size: 364px;
+  }
+}
+
+/* <<<------ 2.MAIN ------>>> */
+
+/* <<<------ MAIN sections ------>>> */
+/* <<<------ 2.1.difficulties ------>>> */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+@media (max-width: 576px) {
+  .main {
+    gap: 50px;
+  }
+}
+
+.difficulties {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .difficulties {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .difficulties {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.difficulties__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* <<<------ 2.2.reasons ------>>> */
+
+.reasons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reasons__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .reasons__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* <<<------ 2.3.upgrade ------>>> */
+
+.upgrade {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .upgrade {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .upgrade {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.upgrade__description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.upgrade__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* <<<------ 2.4.gallery ------>>> */
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 576px) {
+  .gallery {
+    gap: 10px;
+  }
+}
+
+.gallery__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 22px 21px;
+}
+
+@media (max-width: 576px) {
+  .gallery__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.sunset {
+  grid-column: span 2;
+}
+
+.ice-cream {
+  grid-row: span 2;
+}
+
+.tape {
+  grid-row: span 2;
+}
+
+.books {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.street {
+  grid-column: span 2;
+}
+
+/* <<<------ 3.FOOTER ------>>> */
+
+.footer {
+  display: flex;
+  position: relative;
+  min-block-size: 773px;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    min-block-size: 1024px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    min-block-size: 668px;
+  }
+}
+
+.footer__title {
+  text-shadow: 2px 2px 0px #ff0070;
+}
+
+@media (max-width: 576px) {
+  .footer__title {
+    letter-spacing: -2px;
+    line-height: 80%;
+  }
+}
