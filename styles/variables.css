@@ -2,9 +2,38 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
-:root {
-  --page-background: #000028;
-  --page-title: #db00ff;
-  --page-color: #f1b2ce;
-  --accent-color: #ff0070;
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-background: #000028;
+    --page-title: #db00ff;
+    --page-color: #f1b2ce;
+    --accent-color: #ff0070;
+    --hover-button-color: rgba(255, 0, 112, 0.4);
+    --background-image: url(../images/cover-image-dark.png);
+    /* <<<------ REUSE ------>>> */
+    --border-color: var(--accent-color);
+    --text-shadow: var(--accent-color);
+    --article-title-color: var(--page-background);
+    --article-title-background: var(--accent-color);
+    --box-shadow: var(--accent-color);
+    --link-shadow: var(--accent-color);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --page-background: #fff1f7;
+    --page-title: #ffc2e6;
+    --page-color: #353430;
+    --accent-color: #ff8dcb;
+    --hover-button-color: rgba(50, 49, 45, 0.4);
+    --background-image: url(../images/cover-image-light.png);
+    /* <<<------ REUSE ------>>> */
+    --border-color: var(--page-color);
+    --text-shadow: #ff0070;
+    --article-title-color: var(--page-color);
+    --article-title-background: var(--accent-color);
+    --link-shadow: var(--accent-color);
+  }
 }
