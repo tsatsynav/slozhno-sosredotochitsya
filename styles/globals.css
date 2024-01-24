@@ -43,11 +43,14 @@ img {
 button,
 a {
   color: inherit;
-  text-shadow: 2px 2px 0px var(--link-shadow);
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
   text-decoration: none;
+}
+
+a {
+  text-shadow: 2px 2px 0px var(--link-shadow);
 }
 
 html {
@@ -69,17 +72,6 @@ body {
     gap: 40px;
   }
 }
-
-/*TODO:  */
-/* .visually-hidden {
-  position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
-} */
 
 /* <<<------ BUTTONS and LINKS ------>>> */
 
@@ -167,13 +159,15 @@ body {
   }
 }
 
-/* TODO: */
-
-.decorated-zone::before {
+.decorated-zone::before,
+.decorated-zone::after {
   content: "";
   width: 25px;
   height: 25px;
   position: absolute;
+}
+
+.decorated-zone::before {
   left: 20px;
   bottom: 20px;
   border-bottom: 1px solid var(--border-color);
@@ -188,10 +182,6 @@ body {
 }
 
 .decorated-zone::after {
-  content: "";
-  width: 25px;
-  height: 25px;
-  position: absolute;
   right: 20px;
   top: 20px;
   border-top: 1px solid var(--border-color);

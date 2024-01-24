@@ -96,7 +96,8 @@
   background-color: var(--accent-color);
 }
 
-.page.theme_light .top-bar-rec {
+.page.theme_light .top-bar-rec,
+.page.theme_auto .top-bar-rec {
   display: none;
 }
 
