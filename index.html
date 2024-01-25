@@ -24,43 +24,38 @@
   </head>
   <body class="page">
     <header class="header decorated-zone container">
-      <div class="header__top-bar">
-        <nav class="header__theme-menu">
-          <ul class="header__theme-menu-list">
-            <li class="header__theme-menu-item">
-              <button
-                class="header__theme-menu-button header__theme-menu-button_type_light"
-              >
-                день
-              </button>
-            </li>
-            <li class="header__theme-menu-item">
-              <button
-                class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
-                disabled
-              >
-                авто
-              </button>
-            </li>
-            <li class="header__theme-menu-item">
-              <button
-                class="header__theme-menu-button header__theme-menu-button_type_dark"
-              >
-                неон
-              </button>
-            </li>
-          </ul>
-        </nav>
-        <span class="top-bar-rec"> rec </span>
-      </div>
-      <div class="header__description">
-        <h1 class="header__title page-title">no focus</h1>
-        <p class="header__text article-title">
-          Что делать, когда не можешь делать ничего <br />
-          Или почему нам так сложно сконцентрироваться, особенно когда очень
-          надо
-        </p>
-      </div>
+      <nav class="header__theme-menu">
+        <ul class="header__theme-menu-list">
+          <li class="header__theme-menu-item">
+            <button
+              class="header__theme-menu-button header__theme-menu-button_type_light"
+            >
+              день
+            </button>
+          </li>
+          <li class="header__theme-menu-item">
+            <button
+              class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
+              disabled
+            >
+              авто
+            </button>
+          </li>
+          <li class="header__theme-menu-item">
+            <button
+              class="header__theme-menu-button header__theme-menu-button_type_dark"
+            >
+              неон
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <span class="top-bar-rec" aria-hidden="true"> rec </span>
+      <h1 class="header__title page-title">no focus</h1>
+      <p class="header__text article-title">
+        Что делать, когда не можешь делать ничего <br />
+        Или почему нам так сложно сконцентрироваться, особенно когда очень надо
+      </p>
     </header>
     <main class="main container">
       <section class="difficulties">
@@ -102,50 +97,43 @@
         </ul>
       </section>
       <section class="reasons">
-        <h2 class="section-title">Что снижает концентрацию внимания?</h2>
-        <ul class="reasons__list">
-          <li class="section__item">
-            <article class="card">
-              <h3 class="article-title">Многозадачность</h3>
-              <p class="card__text">
-                Как концентрация может снижаться из-за… концентрации? Любая
-                стрессовая ситуация (и резко меняющийся мир в целом) заставляет
-                наш мозг постоянно «сканировать» окружающую среду на предмет
-                опасности. Например, читать новости вместо работы. Но быть
-                собранными всё время — невозможно. Концентрация — мышца, и она
-                может не выдержать, если не давать ей отдохнуть.
-              </p>
-            </article>
-          </li>
-          <li class="section__item">
-            <article class="card">
-              <h3 class="article-title">Еда</h3>
-              <p class="card__text">
-                «Быстрые углеводы» — сахар, белый хлеб, сладости — молниеносно
-                доставляют в мозг энергию и помогают ему лучше работать. Но
-                уходит эта энергия также быстро, как и приходит. А мы в
-                результате попадаем на «углеводные качели»: как только действие
-                «быстрых углеводов» заканчивается, мы чувствуем усталость и
-                сонливость. И хотим ещё больше быстрых углеводов.
-              </p>
-            </article>
-          </li>
-          <li class="section__item">
-            <article class="card">
-              <h3 class="article-title">Гаджеты</h3>
-              <p class="card__text">
-                Да-да, это та самая ситуация, когда на экране ноутбука — код, в
-                наушниках — подкаст, а на компьютере фоном — ещё и видео с
-                забавными утятами. В результате мозг пытается переключиться с
-                одной задачи на другую — и просто не может. А чтобы вернуться к
-                состоянию полной концентрации, человеку в среднем нужно 20
-                минут. Вот и получается, что чем больше времени мы проводим в
-                гаджетах, тем больше времени затем нужно, чтобы вернуться к
-                работе.
-              </p>
-            </article>
-          </li>
-        </ul>
+        <h2 class="section-title reasons__title">
+          Что снижает концентрацию внимания?
+        </h2>
+        <article class="card">
+          <h3 class="article-title">Многозадачность</h3>
+          <p class="card__text">
+            Как концентрация может снижаться из-за… концентрации? Любая
+            стрессовая ситуация (и резко меняющийся мир в целом) заставляет наш
+            мозг постоянно «сканировать» окружающую среду на предмет опасности.
+            Например, читать новости вместо работы. Но быть собранными всё время
+            — невозможно. Концентрация — мышца, и она может не выдержать, если
+            не давать ей отдохнуть.
+          </p>
+        </article>
+        <article class="card">
+          <h3 class="article-title">Еда</h3>
+          <p class="card__text">
+            «Быстрые углеводы» — сахар, белый хлеб, сладости — молниеносно
+            доставляют в мозг энергию и помогают ему лучше работать. Но уходит
+            эта энергия также быстро, как и приходит. А мы в результате попадаем
+            на «углеводные качели»: как только действие «быстрых углеводов»
+            заканчивается, мы чувствуем усталость и сонливость. И хотим ещё
+            больше быстрых углеводов.
+          </p>
+        </article>
+        <article class="card">
+          <h3 class="article-title">Гаджеты</h3>
+          <p class="card__text">
+            Да-да, это та самая ситуация, когда на экране ноутбука — код, в
+            наушниках — подкаст, а на компьютере фоном — ещё и видео с забавными
+            утятами. В результате мозг пытается переключиться с одной задачи на
+            другую — и просто не может. А чтобы вернуться к состоянию полной
+            концентрации, человеку в среднем нужно 20 минут. Вот и получается,
+            что чем больше времени мы проводим в гаджетах, тем больше времени
+            затем нужно, чтобы вернуться к работе.
+          </p>
+        </article>
       </section>
       <section class="upgrade">
         <h2 class="section-title">
