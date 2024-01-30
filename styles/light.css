@@ -18,3 +18,7 @@
   --article-title-background: var(--accent-color);
   --link-shadow: var(--accent-color);
 }
+
+.page.theme_light .top-bar-rec {
+  display: none;
+}

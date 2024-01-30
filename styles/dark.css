@@ -15,9 +15,6 @@
   --border-color: var(--accent-color);
   --text-shadow: var(--accent-color);
   --article-title-color: var(--page-background);
-  --article-title-background: var(--accent-color);
-  --box-shadow: var(--accent-color);
-  --link-shadow: var(--accent-color);
 }
 
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
