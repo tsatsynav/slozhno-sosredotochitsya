@@ -13,6 +13,8 @@
   --background-image: url(../images/cover-image-dark.png);
   /* <<<------ REUSE ------>>> */
   --border-color: var(--accent-color);
+  --page-title-shadow: var(--accent-color);
+  --page-title-color: var(--accent-color);
   --text-shadow: var(--accent-color);
   --article-title-color: var(--page-background);
 }

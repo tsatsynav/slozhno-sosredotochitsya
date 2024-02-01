@@ -1,9 +1,114 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
-/* <<<------ BUTTONS and LINKS ------>>> */
+/* <<<------ 1.COMMON STYLES ------>>> */
+/* <<<------ 1.1.BLOCKS ------>>> */
+.page {
+  display: flex;
+  flex-direction: column;
+  min-inline-size: 375px;
+  max-inline-size: 1440px;
+  margin: 0 auto;
+  gap: 60px;
+  font-family: "IBM Plex mono", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 130%;
+  color: var(--page-color);
+  background-color: var(--page-background);
+  background-image: var(--background-image);
+  background-size: 100% 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media (width <= 1024px) {
+  .page {
+    background-size: 100% 92%;
+  }
+}
+
+@media (width <= 768px) {
+  .page {
+    background-size: 100% 100%;
+  }
+}
+
+@media (width <= 576px) {
+  .page {
+    gap: 44px;
+    background-size: 144% 80%;
+  }
+}
+
+.main-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.container {
+  padding-inline-start: 20px;
+  padding-inline-end: 20px;
+}
+
+@media (width <= 576px) {
+  .container {
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+  }
+}
+
+/* <<<------ 1.2.TITLES ------>>> */
+.page-title {
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-weight: 700;
+  line-height: 82.5%;
+  color: var(--page-title);
+  text-shadow: 4px 4px 0px var(--page-title-shadow);
+}
+
+@media (width <= 768px) {
+  .page-title {
+    text-shadow: 4px 4px 0px var(--accent-color);
+  }
+}
+
+.section-title {
+  max-inline-size: 315px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: var(--section-title-color);
+}
+
+@media (width <= 768px) {
+  .section-title {
+    max-inline-size: 236px;
+  }
+}
+
+@media (width <= 576px) {
+  .section-title {
+    max-inline-size: 100%;
+  }
+}
+
+.article-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--article-title-color);
+  background-color: var(--article-title-background);
+}
+
+.article-title-regular {
+  font-weight: 400;
+}
+
+/* <<<------ 1.3.BUTTONS and LINKS ------>>> */
 
 .header__theme-menu-button {
-  padding: 0.5px 14px;
+  padding: 2px 13px;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -38,76 +143,7 @@
   outline: 1px solid var(--page-color);
 }
 
-/* <<<------ TITLES ------>>> */
-
-.page-title {
-  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  font-weight: 700;
-  line-height: 82.5%;
-  color: var(--page-title);
-  text-shadow: 4px 4px 0px var(--text-shadow);
-}
-
-.section-title {
-  max-inline-size: 315px;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 1.2px;
-  color: var(--accent-color);
-}
-
-@media (width <= 768px) {
-  .section-title {
-    max-inline-size: 236px;
-  }
-}
-
-@media (width <= 576px) {
-  .section-title {
-    /* max-inline-size: 100%; */
-  }
-}
-
-.article-title {
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 1.2px;
-  color: var(--article-title-color);
-  background-color: var(--article-title-background);
-}
-
-.article-title-regular {
-  font-weight: 400;
-}
-
-/* <<<------ BLOCKS ------>>> */
-
-.container {
-  padding-inline-start: 20px;
-  padding-inline-end: 20px;
-}
-
-@media (width <= 576px) {
-  .container {
-    /* padding-inline-start: 10px;
-    padding-inline-end: 10px; */
-  }
-}
-
-.main-section {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-@media (width <= 768px) {
-  .main-section {
-    /* display: flex;
-    flex-direction: column;
-    gap: 20px; */
-  }
-}
-
+/* <<<------ 1.4.DECORATION ------>>> */
 .decorated-zone {
   position: relative;
 }
@@ -139,6 +175,13 @@
   }
 }
 
+@media (width <= 768px) {
+  .decorated-zone::before {
+    bottom: 6px;
+    left: 10px;
+  }
+}
+
 .decorated-zone::after {
   right: 20px;
   top: 20px;
@@ -148,52 +191,13 @@
 
 @media (width <= 576px) {
   .decorated-zone::after {
-    /* right: 10px;
-    top: 10px; */
+    top: 10px;
+    right: 10px;
   }
 }
 
-.page {
-  display: flex;
-  flex-direction: column;
-  min-inline-size: 375px;
-  max-inline-size: 1440px;
-  margin: 0 auto;
-  gap: 60px;
-  font-family: "IBM Plex mono", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 130%;
-  color: var(--page-color);
-  background-color: var(--page-background);
-  background-image: var(--background-image);
-  background-size: 100% 100%;
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-@media (width <= 1024px) {
-  .page {
-    background-size: 100% 92%;
-  }
-}
-
-@media (width <= 768px) {
-  .page {
-    background-image: url(../images/cover-image-dark-768.png);
-    background-size: 100% 100%;
-  }
-}
-
-@media (width <= 576px) {
-  .page {
-    /* background-size: auto 668px; */
-  }
-}
-
-/* <<<------ 1.HEADER ------>>> */
-
+/* <<<------ 2.MAIN CONTENT STYLES ------>>> */
+/* <<<------ 2.1.HEADER ------>>> */
 .header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -215,22 +219,11 @@
   }
 }
 
-@media (width <= 768px) {
-  .header {
-    /* min-block-size: 1024px;
-    grid-template-rows: 1fr 2fr;
-    gap: 174px; */
-  }
-}
-
 @media (width <= 576px) {
   .header {
-    /* min-block-size: 668px;
-    display: flex;
-    flex-direction: column;
-    gap: 65px;
+    min-block-size: 80vh;
     padding-block-start: 10px;
-    padding-block-end: 10px; */
+    padding-block-end: 10px;
   }
 }
 
@@ -250,6 +243,13 @@
   top: 21px;
   right: 48px;
   text-transform: uppercase;
+}
+
+@media (width <= 576px) {
+  .top-bar-rec {
+    top: 11px;
+    right: 38px;
+  }
 }
 
 .top-bar-rec::after {
@@ -292,9 +292,8 @@
 
 @media (width <= 576px) {
   .header__title {
-    /* letter-spacing: -3px;
-    line-height: 80%;
-    left: 0; */
+    letter-spacing: -3px;
+    left: 0;
   }
 }
 
@@ -311,10 +310,8 @@
   }
 }
 
-/* <<<------ 2.MAIN ------>>> */
-
-/* <<<------ MAIN sections ------>>> */
-/* <<<------ 2.1.difficulties ------>>> */
+/* <<<------ 2.2.MAIN SECTION ------>>> */
+/* <<<------ 2.2.1.difficulties ------>>> */
 
 .main {
   display: flex;
@@ -325,13 +322,25 @@
 
 @media (width <= 576px) {
   .main {
-    /* gap: 50px; */
+    gap: 50px;
   }
 }
 
 @media (width <= 768px) {
   .difficulties {
     gap: 40px;
+  }
+}
+
+@media (width <= 526px) {
+  .difficulties {
+    gap: 20px;
+  }
+}
+
+@media (width <= 576px) {
+  .difficulties__title {
+    grid-column: 1/-1;
   }
 }
 
@@ -342,13 +351,19 @@
   grid-column: 2/4;
 }
 
+@media (width <= 576px) {
+  .difficulties__list {
+    grid-column: 1/-1;
+  }
+}
+
 .card {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-/* <<<------ 2.2.reasons ------>>> */
+/* <<<------ 2.2.2.reasons ------>>> */
 
 .reasons__title {
   grid-column: 1/-1;
@@ -360,19 +375,23 @@
   }
 }
 
-/* <<<------ 2.3.upgrade ------>>> */
+/* <<<------ 2.2.3.upgrade ------>>> */
 
 @media (width <= 768px) {
   .upgrade {
-    /* gap: 30px; */
+    gap: 30px;
   }
 }
 
 @media (width <= 576px) {
   .upgrade {
-    /* display: flex;
-    flex-direction: column;
-    gap: 20px; */
+    gap: 20px;
+  }
+}
+
+@media (width <= 576px) {
+  .upgrade__title {
+    grid-column: 1/-1;
   }
 }
 
@@ -383,13 +402,19 @@
   grid-column: 2/4;
 }
 
+@media (width <= 576px) {
+  .upgrade__description {
+    grid-column: 1/-1;
+  }
+}
+
 .upgrade__list {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-/* <<<------ 2.4.gallery ------>>> */
+/* <<<------ 2.2.4.gallery ------>>> */
 
 .gallery {
   display: flex;
@@ -399,7 +424,7 @@
 
 @media (width <= 576px) {
   .gallery {
-    /* gap: 10px; */
+    gap: 10px;
   }
 }
 
@@ -411,9 +436,9 @@
 
 @media (width <= 576px) {
   .gallery__list {
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    gap: 10px; */
+    gap: 10px;
   }
 }
 
@@ -427,7 +452,7 @@
   grid-row: span 2;
 }
 
-/* <<<------ 3.FOOTER ------>>> */
+/* <<<------ 2.3.FOOTER ------>>> */
 
 .footer {
   display: flex;
@@ -440,13 +465,13 @@
 
 @media (width <= 768px) {
   .footer {
-    /* min-block-size: 1024px; */
+    min-block-size: 123.3vh;
   }
 }
 
 @media (width <= 576px) {
   .footer {
-    /* min-block-size: 668px; */
+    min-block-size: 79.3vh;
   }
 }
 
@@ -456,7 +481,6 @@
 
 @media (width <= 576px) {
   .footer__title {
-    /* letter-spacing: -2px;
-    line-height: 80%; */
+    letter-spacing: -2px;
   }
 }

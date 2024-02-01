@@ -13,6 +13,8 @@
   /* <<<------ REUSE ------>>> */
   --border-color: var(--accent-color);
   --text-shadow: var(--accent-color);
+  --page-title-shadow: var(--accent-color);
+  --section-title-color: var(--accent-color);
   --article-title-color: var(--page-background);
   --article-title-background: var(--accent-color);
   --box-shadow: var(--accent-color);

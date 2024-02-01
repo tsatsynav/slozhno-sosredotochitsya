@@ -14,6 +14,8 @@
   /* <<<------ REUSE ------>>> */
   --border-color: var(--page-color);
   --text-shadow: #ff0070;
+  --page-title-shadow: var(--text-shadow);
+  --section-title-color: var(--page-color);
   --article-title-color: var(--page-color);
   --article-title-background: var(--accent-color);
   --link-shadow: var(--accent-color);

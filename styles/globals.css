@@ -59,9 +59,3 @@ html,
 body {
   block-size: 100%;
 }
-
-@media (width <= 576px) {
-  body {
-    /* gap: 40px; */
-  }
-}
