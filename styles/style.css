@@ -49,14 +49,8 @@
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-weight: 700;
   line-height: 82.5%;
-  color: var(--page-title);
+  color: var(--page-title-color);
   text-shadow: 4px 4px 0px var(--page-title-shadow);
-}
-
-@media (width <= 768px) {
-  .page-title {
-    text-shadow: 4px 4px 0px var(--accent-color);
-  }
 }
 
 .section-title {

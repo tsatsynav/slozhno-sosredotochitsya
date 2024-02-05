@@ -5,7 +5,7 @@
 
 :root {
   --page-background: #000028;
-  --page-title: #db00ff;
+  --page-title-color: #db00ff;
   --page-color: #f1b2ce;
   --accent-color: #ff0070;
   --hover-button-color: rgba(255, 0, 112, 0.4);
@@ -18,4 +18,5 @@
   --article-title-color: var(--page-background);
   --article-title-background: var(--accent-color);
   --box-shadow: var(--accent-color);
+  --link-shadow: var(--accent-color);
 }
