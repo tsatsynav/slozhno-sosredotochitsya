@@ -12,6 +12,7 @@
   --hover-button-color: rgba(255, 0, 112, 0.4);
   --background-image: url(../images/cover-image-dark.png);
   /* <<<------ REUSE ------>>> */
+  --button-color: var(--accent-color);
   --border-color: var(--accent-color);
   --text-shadow: var(--accent-color);
   --page-title-shadow: var(--accent-color);
